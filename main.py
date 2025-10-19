@@ -2,9 +2,6 @@ import requests
 from dotenv import load_dotenv
 import os
 
-
-
-
     
 def main():
     load_dotenv()
@@ -26,6 +23,7 @@ def main():
 название праздника: {name}
 описание: {description}
 """)
+
 
 if __name__ == "main":
     main()
