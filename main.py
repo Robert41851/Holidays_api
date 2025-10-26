@@ -11,7 +11,20 @@ def main():
     response = requests.get(url,params=params)
     response.raise_for_status()
     holidays = response.json()["response"]["holidays"]
-    months = ["января", "февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"]
+    months = [
+        "января", 
+        "февраля",
+        "марта",
+        "апреля",
+        "мая",
+        "июня",
+        "июля",
+        "августа",
+        "сентября",
+        "октября",
+        "ноября",
+        "декабря"
+    ]
     for holiday in holidays:
         name = holiday["name"]
         day = holiday["date"]["datetime"]["day"]
